@@ -1,0 +1,6 @@
+{
+  "name": "專業發票產生器",
+  "description": "一款現代化、功能齊全且設計精美的繁體中文發票產生器。支援流暢動畫、實時預覽、自訂商標、線上簽名與完美的 PDF 列印匯出功能。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

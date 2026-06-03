@@ -1,0 +1,76 @@
+{
+  "entities": {
+    "invoice": {
+      "title": "Invoice",
+      "description": "A single invoice document created and owned by a user",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The unique identifier of the invoice locally"
+        },
+        "userId": {
+          "type": "string",
+          "description": "The Firebase Auth UID of the creator"
+        },
+        "invoiceNumber": {
+          "type": "string",
+          "description": "The dynamic reference serial/invoice number"
+        },
+        "issueDate": {
+          "type": "string"
+        },
+        "dueDate": {
+          "type": "string"
+        },
+        "paymentTerms": {
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "taxType": {
+          "type": "string"
+        },
+        "taxRate": {
+          "type": "number"
+        },
+        "discountType": {
+          "type": "string"
+        },
+        "discountValue": {
+          "type": "number"
+        },
+        "shippingFee": {
+          "type": "number"
+        },
+        "amountPaid": {
+          "type": "number"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "terms": {
+          "type": "string"
+        },
+        "theme": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "invoiceNumber"
+      ]
+    }
+  },
+  "firestore": {
+    "/invoices/{invoiceId}": {
+      "schema": "invoice",
+      "description": "Primary user invoices collection stored securely under individual ownership"
+    }
+  }
+}
